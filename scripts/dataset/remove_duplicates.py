@@ -20,7 +20,8 @@ def get_dhash(file_path: Path, hash_size: int = 8) -> int:
     try:
         with Image.open(file_path) as img:
             img = img.convert("L").resize((hash_size + 1, hash_size), Image.Resampling.LANCZOS)
-            pixels = list(img.getdata())
+            # Convert to flattened pixel values
+            pixels = list(getattr(img, "get_flattened_data", img.getdata)())
             
             diff = []
             for row in range(hash_size):
