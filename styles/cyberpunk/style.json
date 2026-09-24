@@ -1,0 +1,10 @@
+{
+  "name": "cyberpunk",
+  "display_name": "Neo Tokyo Cyberpunk",
+  "description": "Neon chromatic aberration, dark atmospheric contrast, holographic reflections, futuristic tones.",
+  "model": "anime_diffusion_base",
+  "lora": "models/anime_lora/cyberpunk_v1.safetensors",
+  "strength": 0.85,
+  "recommended_resolution": 512,
+  "license": "CreativeML OpenRAIL-M"
+}

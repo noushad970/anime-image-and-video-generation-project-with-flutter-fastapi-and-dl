@@ -1,0 +1,49 @@
+# Anime Reality AI - Core System Configuration
+
+hardware:
+  max_vram_gb: 8.0
+  device: "cuda"
+  allow_cpu_offload: true
+  enable_vae_slicing: true
+  enable_vae_tiling: true
+  enable_attention_slicing: true
+  default_precision: "fp16"
+
+image:
+  default_resolution: 512
+  max_resolution: 1024
+  supported_formats: ["jpg", "jpeg", "png", "webp"]
+
+video:
+  default_fps: 24
+  max_frames: 300
+  supported_formats: ["mp4", "mov", "webm"]
+  extract_fps: 24
+  codec: "libx264"
+  crf: 19
+
+generation:
+  quality_profiles:
+    fast:
+      steps: 8
+      resolution: 512
+      model_type: "lightweight"
+    balanced:
+      steps: 15
+      resolution: 512
+      model_type: "lora"
+    quality:
+      steps: 25
+      resolution: 768
+      model_type: "lora_controlnet"
+  default_profile: "balanced"
+
+models:
+  registry_file: "models/registry.json"
+  cache_dir: "models/cache"
+
+paths:
+  dataset_root: "datasets"
+  output_root: "outputs"
+  checkpoint_root: "checkpoints"
+  styles_root: "styles"

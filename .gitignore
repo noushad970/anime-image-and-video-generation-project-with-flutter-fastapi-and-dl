@@ -1,0 +1,38 @@
+# Environments & Virtual Envs
+.venv/
+env/
+venv/
+ENV/
+.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Project Large Assets & Data
+models/*
+!models/README.md
+datasets/*
+!datasets/README.md
+outputs/*
+!outputs/README.md
+checkpoints/*
+!checkpoints/README.md
+
+# IDEs & System
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

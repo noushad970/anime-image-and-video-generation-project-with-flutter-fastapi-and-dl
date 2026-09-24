@@ -1,0 +1,40 @@
+# Core AI & Deep Learning (PyTorch installed via CUDA index)
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+
+# Diffusion & Transformers
+diffusers>=0.27.0
+transformers>=4.40.0
+accelerate>=0.29.0
+peft>=0.10.0
+safetensors>=0.4.3
+huggingface_hub>=0.22.0
+
+# Computer Vision & Image/Video Processing
+opencv-python>=4.9.0
+Pillow>=10.2.0
+numpy>=1.26.0
+imageio>=2.34.0
+imageio-ffmpeg>=0.4.9
+scikit-image>=0.22.0
+
+# Backend & API
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+pydantic>=2.7.0
+python-multipart>=0.0.9
+aiofiles>=23.2.1
+
+# Configuration & Utilities
+pyyaml>=6.0.1
+python-dotenv>=1.0.1
+tqdm>=4.66.2
+rich>=13.7.1
+click>=8.1.7
+
+# Testing & Quality
+pytest>=8.1.1
+pytest-asyncio>=0.23.6
+flake8>=7.0.0
+black>=24.3.0

@@ -1,0 +1,10 @@
+{
+  "name": "watercolor",
+  "display_name": "Watercolor Shinkai",
+  "description": "Luminous skies, soft watercolor blending, painterly lighting and cloudscapes.",
+  "model": "anime_diffusion_base",
+  "lora": "models/anime_lora/watercolor_v1.safetensors",
+  "strength": 0.85,
+  "recommended_resolution": 512,
+  "license": "CreativeML OpenRAIL-M"
+}

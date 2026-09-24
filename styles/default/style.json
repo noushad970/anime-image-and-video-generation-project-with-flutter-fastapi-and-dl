@@ -1,0 +1,10 @@
+{
+  "name": "default",
+  "display_name": "Classic Studio Anime",
+  "description": "Clean lines, balanced vibrancy, classic Japanese animation aesthetic.",
+  "model": "anime_lightweight_v1",
+  "lora": null,
+  "strength": 1.0,
+  "recommended_resolution": 512,
+  "license": "MIT"
+}

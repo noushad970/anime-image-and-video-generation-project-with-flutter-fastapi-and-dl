@@ -1,0 +1,10 @@
+{
+  "name": "fantasy",
+  "display_name": "Ethereal Fantasy",
+  "description": "Magical particle glows, mystical color palettes, rich saturated foliage and fantasy elements.",
+  "model": "anime_diffusion_base",
+  "lora": "models/anime_lora/fantasy_v1.safetensors",
+  "strength": 0.8,
+  "recommended_resolution": 512,
+  "license": "CreativeML OpenRAIL-M"
+}
