@@ -69,6 +69,19 @@ app.include_router(styles_router)
 app.include_router(models_router)
 
 
+@app.get("/")
+async def root_endpoint():
+    """Welcome and quick health check."""
+    from inference.memory_manager import VRAMManager
+    hw = VRAMManager.get_hardware_status()
+    return {
+        "message": "Anime Reality AI Backend Engine is Running!",
+        "version": "1.0.0",
+        "docs_url": "/docs",
+        "hardware": hw
+    }
+
+
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
     logger.error(f"Global unhandled exception on {request.url.path}: {exc}", exc_info=True)
