@@ -1,11 +1,14 @@
-# Environments & Virtual Envs
+# ===================================================
+# Anime Reality AI — Comprehensive Git Ignore Rules
+# ===================================================
+
+# Python Environments & Caches
 .venv/
 env/
 venv/
 ENV/
 .env
-
-# Python artifacts
+.env.local
 __pycache__/
 *.py[cod]
 *$py.class
@@ -14,25 +17,62 @@ __pycache__/
 .coverage
 htmlcov/
 
-# Project Large Assets & Data
-models/*
-!models/README.md
-datasets/*
+# Large AI Weights & Models (>10MB binary assets)
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.ckpt
+*.onnx
+*.tflite
+*.engine
+*.h5
+
+# Keep model registry configuration
+!models/registry.json
+!models/**/.gitkeep
+
+# Large Datasets & Media (>50GB local datasets)
+datasets/
 !datasets/README.md
-outputs/*
+!datasets/**/.gitkeep
+
+# Output artifacts & Job Results
+outputs/
 !outputs/README.md
-checkpoints/*
+!outputs/**/.gitkeep
+checkpoints/
 !checkpoints/README.md
 
-# IDEs & System
+# SQLite Local Database
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# Flutter & Dart Build Artifacts
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins
+mobile/.flutter-plugins-dependencies
+mobile/.packages
+mobile/.pub-cache/
+mobile/.pub/
+mobile/android/.gradle/
+mobile/android/local.properties
+mobile/android/app/build/
+mobile/ios/Flutter/Generated.xcconfig
+mobile/ios/Flutter/flutter_export_environment.sh
+mobile/ios/Pods/
+mobile/windows/flutter/ephemeral/
+mobile/linux/flutter/ephemeral/
+*.apk
+*.aab
+
+# IDEs & System Files
 .idea/
 .vscode/
 *.swp
 *.swo
 .DS_Store
 Thumbs.db
-
-# Build artifacts
-build/
-dist/
-*.egg-info/
+desktop.ini

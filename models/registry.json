@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "models": {
+    "anime_lightweight_v1": {
+      "name": "AnimeGANv2 / Lightweight Generator",
+      "version": "1.0",
+      "type": "lightweight_image2image",
+      "source": "Trained / Pretrained",
+      "license": "MIT / Apache-2.0 Compatible",
+      "commercial_use": true,
+      "recommended_vram": "2GB - 4GB",
+      "resolution": "512x512",
+      "capabilities": ["fast_photo_to_anime", "real_time_candidate"]
+    },
+    "anime_diffusion_base": {
+      "name": "Animagine / AnyLoRA Base SD1.5/SDXL",
+      "version": "1.5 / XL",
+      "type": "latent_diffusion",
+      "source": "HuggingFace Hub",
+      "license": "CreativeML OpenRAIL-M",
+      "commercial_use": true,
+      "recommended_vram": "6GB - 8GB",
+      "resolution": "512x512 to 768x768",
+      "capabilities": ["high_quality_anime_style", "lora_conditioning"]
+    },
+    "animatediff_v3": {
+      "name": "AnimateDiff Motion Module v3",
+      "version": "3.0",
+      "type": "video_diffusion_motion",
+      "source": "guoyww/animatediff",
+      "license": "Apache-2.0",
+      "commercial_use": true,
+      "recommended_vram": "8GB (with VAE tiling & attention slicing)",
+      "resolution": "512x512",
+      "capabilities": ["video_temporal_consistency", "frame_motion_conditioning"]
+    },
+    "controlnet_depth_lineart": {
+      "name": "ControlNet Lineart & Depth",
+      "version": "1.0",
+      "type": "structure_conditioning",
+      "source": "lllyasviel/ControlNet",
+      "license": "Apache-2.0",
+      "commercial_use": true,
+      "recommended_vram": "8GB",
+      "resolution": "512x512",
+      "capabilities": ["structural_preservation", "pose_depth_locking"]
+    }
+  }
+}
