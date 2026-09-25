@@ -43,7 +43,7 @@ def test_vram_manager_status():
 
 def test_anime_generator_network_forward():
     import torch
-    network = AnimeGeneratorNetwork(num_res_blocks=2).eval()
+    network = AnimeGeneratorNetwork().eval()
     dummy_input = torch.randn(1, 3, 128, 128)
     with torch.inference_mode():
         output = network(dummy_input)
